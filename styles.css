@@ -1,0 +1,356 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333;
+    display: flex;
+    flex-direction: column; /* Ensure content flows in a column */
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: space-between; /* Pushes the title and buttons to the sides */
+    align-items: center;
+    background-color: #e0f7fa; /* Light cyan background */
+    color: #333;
+    padding: 20px;
+}
+
+.nav-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5em; /* Slightly reduced font size */
+    font-weight: bold; /* Bold font weight */
+    color: #2e8b57; /* Sea green color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-button {
+    background-color: #487153; /* Medium sea green */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+}
+
+.nav-button:hover {
+    background-color: #2e8b57; /* Darker sea green */
+    transform: translateY(-2px);
+}
+
+/* Header styles */
+.page-header {
+    text-align: center;
+    color: #000000; /* Set text color */
+    font-size: 24px; /* Set font size */
+    margin: 5px auto; /* Reduced top and bottom margin */
+    font-weight: bold;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .nav-title {
+        font-size: 2em; /* Adjusted font size for mobile */
+    }
+
+    .nav-buttons {
+        margin-top: 10px;
+    }
+
+    .nav-button {
+        margin-left: 0; /* Remove left margin on mobile */
+    }
+
+    .page-header {
+        font-size: 20px; /* Decrease font size for smaller screens */
+        margin: 5px auto; /* Adjust margin */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-title {
+        font-size: 1.5em; /* Further reduced font size for smaller screens */
+    }
+
+    .page-header {
+        font-size: 18px; /* Further decrease font size for mobile devices */
+        margin: 3px auto; /* Further adjust margin */
+    }
+}
+
+#container {
+    background-color: #f0f0f0; /* Light gray background */
+    flex: 1; /* Take up remaining vertical space */
+    padding: 10px 20px; /* Reduced top and bottom padding */
+    display: flex;
+    flex-direction: column; /* Ensure children are stacked */
+}
+
+#back-button-container {
+    margin-bottom: 20px; /* Space between back-button and other elements */
+}
+
+.back-button {
+    background-color: #ff9800; /* Orange color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px; /* Adjusted padding */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 10px;
+    font-size: 1em; /* Adjust font size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+    background-color: #e68a00; /* Darker orange color on hover */
+    transform: translateY(-2px);
+}
+
+/* Centered and stacked buttons */
+#centered-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    margin-top: 30px; /* Adjusted margin top */
+}
+
+.stacked-button {
+    width: 100%; /* Make button width 100% of parent container */
+    background-color: #487153; /* Medium sea green */
+    color: #fff;
+    border: none;
+    padding: 15px 0; /* Adjust padding for consistent size */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-bottom: 10px; /* Space between buttons */
+    border-radius: 10px;
+    font-size: 1.2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stacked-button:hover {
+    background-color: #2e8b57; /* Darker sea green */
+    transform: translateY(-2px);
+}
+
+/* Table container styles */
+#table-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 300px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Table styles */
+.button-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.button-table th, .button-table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.button-table th {
+    background-color: #e0f7fa; /* Match the nav background */
+    font-size: 1.5em;
+}
+
+.button-table td {
+    padding: 0; /* Remove padding to allow button to fill the cell */
+}
+
+.table-button {
+    width: 100%; /* Make button fill the table cell */
+    background-color: #487153; /* Medium sea green */
+    color: #fff;
+    border: none;
+    padding: 15px 0; /* Adjust padding for consistent size */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 0; /* Remove border-radius for table buttons */
+    font-size: 1.2em;
+}
+
+.table-button:hover {
+    background-color: #2e8b57; /* Darker sea green */
+    transform: translateY(-2px);
+}
+
+/* Form container styles */
+#form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.form-element {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#dropdown {
+    cursor: pointer;
+}
+
+#download {
+    background-color: #808782; /* Medium sea green */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#download:hover {
+    background-color: #41604e; /* Darker sea green */
+    transform: translateY(-2px);
+}
+#submit-button {
+    background-color: #487153; /* Medium sea green */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#submit-button:hover {
+    background-color: #2e8b57; /* Darker sea green */
+    transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-title {
+        font-size: 2em; /* Adjusted font size for mobile */
+    }
+
+    .nav-buttons {
+        margin-top: 10px;
+    }
+
+    .nav-button {
+        margin-left: 0; /* Remove left margin on mobile */
+    }
+
+    .button-table {
+        margin-top: 15px;
+    }
+
+    .button-table th, .button-table td {
+        padding: 8px;
+    }
+
+    .table-button {
+        padding: 10px 0;
+    }
+
+    .stacked-button {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    #form-container {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-title {
+        font-size: 1.5em; /* Further reduced font size for smaller screens */
+    }
+
+    .page-header {
+        font-size: 18px; /* Further decrease font size for mobile devices */
+        margin: 3px auto; /* Further adjust margin */
+    }
+
+    .button-table th, .button-table td {
+        padding: 5px;
+    }
+
+    .table-button {
+        padding: 8px 0;
+    }
+
+    .stacked-button {
+        width: 95%; /* Adjust width for mobile devices */
+        padding: 12px 0; /* Adjust padding for mobile devices */
+    }
+
+    .back-button {
+        padding: 8px 16px; /* Adjusted padding for smaller size */
+        font-size: 0.9em; /* Adjusted font size */
+        border-radius: 8px; /* Smaller border radius */
+    }
+
+    #back-button-container {
+        top: 5px; /* Adjusted top distance */
+        left: 10px; /* Adjusted left distance */
+    }
+
+    #centered-buttons {
+        margin-top: 20px; /* Adjusted margin top */
+    }
+
+    #form-container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Ensure all divs stay stacked */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+
+.table-container,
+.another-div,
+#back-button-container,
+#centered-buttons {
+    margin-bottom: 20px; /* Space between stacked divs */
+}
